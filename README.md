@@ -107,14 +107,16 @@ cd frontend
 npm install
 Create .env.local:
 
+
 env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 Run the frontend:
 
-bash
+```bash
 npm run dev
 Application runs at:
 http://localhost:3000
+```
 
 ⚠️ Known Limitations & Trade-offs
 🗄️ Database Persistence
@@ -126,9 +128,11 @@ Audio messages are stored and playable but not transcribed into text.
 🔐 Authentication
 Uses a role selector instead of a full authentication system (JWT / OAuth).
 
-🔗 Live Demo
+
+**🔗 Live Demo**
 👉 https://healthcare-doctor.vercel.app?_vercel_share=bTVWGAzFMo1kQJri0QZyfe4Knk8VUdy5
-🚧 Future Improvements
+
+**🚧 Future Improvements**
 Speech-to-text transcription for audio messages
 
 Doctor-editable AI summaries
