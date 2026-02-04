@@ -28,7 +28,7 @@ export default function MessageBubble({
           <audio
             controls
             className="mb-2 w-full"
-            src={`http://localhost:8000${audio_path}`}
+            src={`${process.env.NEXT_PUBLIC_API_URL}${audio_path}`}
           />
         )}
 

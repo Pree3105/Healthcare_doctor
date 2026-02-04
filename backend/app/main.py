@@ -13,11 +13,12 @@ from app.database import init_db
 
 os.makedirs("audio_storage", exist_ok=True)
 app = FastAPI()
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
 
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", os.getenv("FRONTEND_URL", "*")],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],

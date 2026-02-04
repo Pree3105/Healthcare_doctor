@@ -163,7 +163,7 @@ export default function Chat({ messages }: ChatProps) {
                           className="h-8"
                           onPlay={() => handleAudioPlay(message.id)}
                           onEnded={handleAudioEnd}
-                          src={`http://localhost:8000${message.audio_path}`}
+                          src={`${process.env.NEXT_PUBLIC_API_URL}${message.audio_path}`}
                         >
                           Your browser does not support audio playback.
                         </audio>

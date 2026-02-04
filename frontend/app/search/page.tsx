@@ -313,7 +313,7 @@ export default function SearchPage() {
                         <audio
                           controls
                           className="w-full h-10"
-                          src={`http://localhost:8000${msg.audio_path}`}
+                          src={`${process.env.NEXT_PUBLIC_API_URL}${msg.audio_path}`}
                         >
                           Your browser does not support audio playback.
                         </audio>
