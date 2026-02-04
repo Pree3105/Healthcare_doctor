@@ -1,7 +1,9 @@
 # 🩺 **Medical Translation Assistant**
-## **by Pranati B**
+## **by Pranathi Bhat**
 
 ---
+**🔗 Live Demo**
+👉 https://healthcare-doctor.vercel.app?_vercel_share=bTVWGAzFMo1kQJri0QZyfe4Knk8VUdy5
 
 ## 🚀 **Project Overview**
 
@@ -128,9 +130,6 @@ Audio messages are stored and playable but not transcribed into text.
 🔐 Authentication
 Uses a role selector instead of a full authentication system (JWT / OAuth).
 
-
-**🔗 Live Demo**
-👉 https://healthcare-doctor.vercel.app?_vercel_share=bTVWGAzFMo1kQJri0QZyfe4Knk8VUdy5
 
 **🚧 Future Improvements**
 Speech-to-text transcription for audio messages
