@@ -1,10 +1,11 @@
 import sqlite3
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
 load_dotenv()
-DB_PATH = os.getenv("DATABASE_PATH", "conversations.db")
+DB_PATH = os.getenv("DATABASE_PATH", "/tmp/conversations.db")
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
@@ -12,6 +13,9 @@ def get_db_connection():
     return conn
 
 def init_db():
+    db_directory = os.path.dirname(DB_PATH)
+    if db_directory:
+        Path(db_directory).mkdir(parents=True, exist_ok=True)
     conn = get_db_connection()
     cursor = conn.cursor()
 
